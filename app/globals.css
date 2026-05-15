@@ -1,26 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-htx-black: #080604;
+  --color-gold:      #C8970C;
+  --color-gold-light:#F0B429;
+  --color-cream:     #F5EDD8;
+  --color-htx-red:   #B83020;
+  --color-brown:     #2E1503;
+  --color-brown-mid: #4a2008;
+
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body:    "Instrument Sans", sans-serif;
+  --font-mono:    "DM Mono", monospace;
+  --font-accent:  "Syne", sans-serif;
+  --font-sans:    "Instrument Sans", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #080604;
+  color: #F5EDD8;
+  font-family: "Instrument Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+}
+@media (pointer: coarse) { body { cursor: auto; } }
+a, button { cursor: none; }
+@media (pointer: coarse) { a, button { cursor: auto; } }
+
+/* ── Custom cursor ── */
+.cursor-dot {
+  position: fixed;
+  width: 8px; height: 8px;
+  background: #C8970C;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+.cursor-ring {
+  position: fixed;
+  width: 32px; height: 32px;
+  border: 1.5px solid rgba(200,151,12,.7);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width .15s, height .15s;
+}
+
+/* ── Keyframes ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes float {
+  0%,100% { transform: translateY(0px) rotate(-2deg); }
+  50%     { transform: translateY(-22px) rotate(4deg); }
+}
+@keyframes pulse-glow {
+  0%,100% { box-shadow: 0 0 16px rgba(200,151,12,.35); }
+  50%     { box-shadow: 0 0 40px rgba(200,151,12,.7); }
+}
+@keyframes badge-pulse {
+  0%,100% { opacity:1; }
+  50%     { opacity:.45; }
+}
+@keyframes fade-up {
+  from { opacity:0; transform:translateY(28px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+.animate-marquee     { animation: marquee 32s linear infinite; }
+.animate-float       { animation: float 4.5s ease-in-out infinite; }
+.animate-pulse-glow  { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-badge-pulse { animation: badge-pulse 1.4s ease-in-out infinite; }
+.animate-fade-up     { animation: fade-up .7s ease forwards; }
+
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C8970C55, #C8970C, #C8970C55, transparent);
 }
