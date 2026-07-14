@@ -146,26 +146,26 @@ export default function HomePage() {
             <div>
               <div className="inline-flex items-center gap-2.5 border border-gold/35 px-4 py-2 mb-6 font-mono text-xs text-gold tracking-widest">
                 <span className="w-2 h-2 rounded-full bg-gold animate-badge-pulse" />
-                IN PERSON · CAKE POP STAND
+                IN PERSON · THE STAND
               </div>
               <h2 className="font-display text-5xl md:text-6xl text-cream tracking-wider mb-4">
-                CAKE POP<br/>
+                THE<br/>
                 <span className="text-gold">STAND</span>
               </h2>
               <p className="font-body text-cream/60 text-lg leading-relaxed mb-3">
-                Same kitchen. Same standards. Same zero shortcuts.
+                Cookies. Cake pops. In person. Until they&apos;re gone.
               </p>
               <p className="font-body text-cream/40 leading-relaxed mb-6">
-                Houston-named. Brown butter cake. Valrhona chocolate shells. Maldon finish.
-                Everything the cookies are built on — in one perfect pop.
+                Same brown butter. Same Valrhona. Same zero shortcuts — now in two formats.
+                The full HTX Bakehouse experience, no drone required.
               </p>
               <div className="bg-gold/5 border border-gold/20 px-5 py-4 mb-8 font-mono text-xs text-gold/70 tracking-wider space-y-1">
                 <p><span className="text-gold">WHEN:</span> Friday &amp; Saturday · 4PM – 8PM</p>
-                <p><span className="text-gold">HOW:</span> In person · Until sold out</p>
+                <p><span className="text-gold">WHAT:</span> Cookies + Cake Pops · Until sold out</p>
                 <p className="text-cream/30">No pre-order. No holds. First come, first served.</p>
               </div>
               <Link href="/menu" className="font-mono text-xs text-gold tracking-widest uppercase underline underline-offset-4 hover:text-gold-light transition-colors">
-                See the Cake Pop Menu →
+                See the Full Menu →
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-4">
