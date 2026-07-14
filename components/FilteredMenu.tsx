@@ -11,6 +11,7 @@ const tabs: { label: string; value: Filter }[] = [
   { label: 'Classic',    value: 'classic'     },
   { label: 'Premium',    value: 'premium'     },
   { label: 'Baddie Box', value: 'baddie-box'  },
+  { label: 'Cake Pops',  value: 'cake-pop'   },
 ];
 
 interface Props {

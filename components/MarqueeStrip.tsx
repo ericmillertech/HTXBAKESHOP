@@ -1,6 +1,6 @@
 export default function MarqueeStrip() {
   const text =
-    'HTX BAKEHOUSE · DRONE DELIVERY ONLY · TORRES METHOD · LEVAIN SIZE · BORN IN HOUSTON · NO SHORTCUTS · THE SLAB · CANDY PAINT · THE GRILLZ · DROP TO YOUR DOOR · ';
+    'HTX BAKEHOUSE · DRONE DELIVERY ONLY · TORRES METHOD · LEVAIN SIZE · BORN IN HOUSTON · NO SHORTCUTS · THE SLAB · CANDY PAINT · THE GRILLZ · CAKE POP STAND · DROP TO YOUR DOOR · ';
 
   return (
     <div className="bg-gold overflow-hidden py-3 select-none">

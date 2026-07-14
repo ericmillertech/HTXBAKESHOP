@@ -1,4 +1,4 @@
-export type CookieCategory = 'classic' | 'premium' | 'baddie-box';
+export type CookieCategory = 'classic' | 'premium' | 'baddie-box' | 'cake-pop';
 
 export interface ColorWay {
   name: string;
@@ -219,5 +219,72 @@ export const cookies: Cookie[] = [
     featured: false,
     emoji: '☕',
     macros: { protein: 20, calories: 220, netCarbs: 7 },
+  },
+
+  // ── CAKE POPS ──
+  {
+    id: 'the-dip',
+    name: 'THE DIP',
+    category: 'cake-pop',
+    htownStory: 'Every Houston story starts with a dip in the sauce. Pure chocolate fudge, coated in Valrhona dark.',
+    description: 'Dense chocolate fudge cake center, Valrhona 60% dark chocolate shell, Maldon sea salt finish. Built on the same standards as the cookies.',
+    ingredients: ['Valrhona 60% discs', 'Brown butter', 'Dutch cocoa', 'Madagascar vanilla bean paste', 'Maldon salt'],
+    allergens: ['wheat', 'dairy', 'eggs'],
+    price: 4.00,
+    badge: null,
+    featured: false,
+    emoji: '🍫',
+  },
+  {
+    id: 'third-ward',
+    name: 'THIRD WARD',
+    category: 'cake-pop',
+    htownStory: "Houston's historic Third Ward. Red velvet roots run deep. This one pays respect.",
+    description: 'Red velvet cake center, full-fat cream cheese and Valrhona Ivoire white chocolate shell. Deep color, zero artificial dye.',
+    ingredients: ['Dutch cocoa', 'Full-fat cream cheese', 'Valrhona Ivoire white', 'Brown butter', 'Madagascar vanilla bean paste'],
+    allergens: ['wheat', 'dairy', 'eggs'],
+    price: 4.00,
+    badge: null,
+    featured: false,
+    emoji: '❤️',
+  },
+  {
+    id: 'space-city',
+    name: 'SPACE CITY',
+    category: 'cake-pop',
+    htownStory: "Houston put the first man on the moon. This pop shines like the cosmos — butterfly pea flower mirror glaze, no artificial color.",
+    description: 'Vanilla bean cake center, natural butterfly pea flower and lavender mirror glaze. Deep blue-purple shell. All natural color.',
+    ingredients: ['Madagascar vanilla bean paste', 'Butterfly pea flower', 'Valrhona Ivoire white', 'Brown butter', 'Natural lavender'],
+    allergens: ['wheat', 'dairy', 'eggs'],
+    price: 4.50,
+    badge: 'premium',
+    featured: false,
+    emoji: '🚀',
+  },
+  {
+    id: 'screwed-up',
+    name: 'SCREWED UP',
+    category: 'cake-pop',
+    htownStory: "DJ Screw changed the tempo of everything. Salted caramel slow drip over a Valrhona dark shell. Still hitting different.",
+    description: 'Salted caramel cake center, Valrhona 70% dark chocolate shell, caramel slow drip finish. Built slow. Intentionally.',
+    ingredients: ['Brown butter caramel', 'Valrhona 70% dark', 'Maldon salt', 'King Arthur flour', 'Madagascar vanilla bean paste'],
+    allergens: ['wheat', 'dairy', 'eggs'],
+    price: 4.00,
+    badge: null,
+    featured: false,
+    emoji: '🌀',
+  },
+  {
+    id: 'bellaire',
+    name: 'BELLAIRE',
+    category: 'cake-pop',
+    htownStory: "Named for the strip. Strawberry shortcake rolling clean with a pink mirror glaze.",
+    description: 'Strawberry shortcake cake center, freeze-dried strawberry dust, Valrhona Ivoire shell in natural pink mirror glaze. Lemon zest finish.',
+    ingredients: ['Freeze-dried strawberry', 'Valrhona Ivoire white', 'Golden Oreo crumble', 'Brown butter', 'Lemon zest'],
+    allergens: ['wheat', 'dairy', 'eggs', 'soy'],
+    price: 4.00,
+    badge: null,
+    featured: false,
+    emoji: '🍓',
   },
 ];

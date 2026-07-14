@@ -5,7 +5,7 @@ import { cookies } from '@/data/cookies';
 
 export const metadata: Metadata = {
   title: 'Menu',
-  description: '14 Houston-named gourmet cookies. Classic, Premium, and Baddie Box. All made with Valrhona chocolate, brown butter, and zero artificial flavors.',
+  description: '14 Houston-named gourmet cookies and 5 cake pops. Classic, Premium, Baddie Box, and Cake Pop Stand. Valrhona chocolate, brown butter, zero artificial flavors.',
 };
 
 export default function MenuPage() {
@@ -17,8 +17,8 @@ export default function MenuPage() {
           <p className="font-mono text-xs text-gold/40 tracking-[0.25em] uppercase mb-4">HTX Bakehouse</p>
           <h1 className="font-display text-7xl md:text-8xl text-cream tracking-wide mb-4">THE MENU</h1>
           <p className="font-body text-cream/45 text-lg max-w-2xl leading-relaxed">
-            14 cookies. Every one named for the streets, sounds, and culture of Houston. Valrhona chocolate.
-            Brown butter. Maldon salt. Zero artificial flavors. Zero shortcuts.
+            14 cookies. 5 cake pops. Every one named for the streets, sounds, and culture of Houston.
+            Valrhona chocolate. Brown butter. Maldon salt. Zero artificial flavors. Zero shortcuts.
           </p>
         </div>
       </section>
