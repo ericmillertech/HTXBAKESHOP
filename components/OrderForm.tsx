@@ -3,8 +3,6 @@
 import { useState } from 'react';
 import { cookies } from '@/data/cookies';
 
-type PickupDelivery = 'pickup' | 'delivery';
-
 interface LineItem {
   cookieId: string;
   qty: number;
@@ -14,7 +12,6 @@ interface FormState {
   name: string;
   email: string;
   phone: string;
-  pickupOrDelivery: PickupDelivery;
   address: string;
   notes: string;
 }
@@ -23,7 +20,7 @@ export default function OrderForm() {
   const [quantities, setQuantities] = useState<Record<string, number>>({});
   const [form, setForm] = useState<FormState>({
     name: '', email: '', phone: '',
-    pickupOrDelivery: 'pickup', address: '', notes: '',
+    address: '', notes: '',
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -89,7 +86,7 @@ export default function OrderForm() {
         </div>
 
         <p className="font-mono text-xs text-cream/35">
-          Include your name in the payment note. Pickup: Saturday & Sunday, Houston TX.
+          Include your name in the payment note. Drone delivery: Saturday & Sunday, Houston area.
         </p>
       </div>
     );
@@ -102,7 +99,7 @@ export default function OrderForm() {
       <div className="mb-12">
         <h2 className="font-display text-3xl text-gold tracking-wider mb-2">Select Cookies</h2>
         <p className="font-mono text-xs text-cream/40 tracking-wider mb-8">
-          PICKUP: SAT & SUN · ORDER CUTOFF: THURSDAY MIDNIGHT
+          DRONE DELIVERY: SAT & SUN · ORDER CUTOFF: THURSDAY MIDNIGHT
         </p>
 
         <div className="space-y-3">
@@ -144,39 +141,22 @@ export default function OrderForm() {
         </div>
       </div>
 
-      {/* Pickup vs delivery */}
+      {/* Drone delivery address */}
       <div className="mb-10">
-        <h2 className="font-display text-3xl text-gold tracking-wider mb-6">Pickup or Delivery</h2>
-        <div className="grid grid-cols-2 gap-4 mb-6">
-          {(['pickup', 'delivery'] as const).map(opt => (
-            <button
-              key={opt}
-              type="button"
-              onClick={() => setForm(f => ({ ...f, pickupOrDelivery: opt }))}
-              className={`p-5 border text-left transition-all ${
-                form.pickupOrDelivery === opt
-                  ? 'border-gold bg-gold/8 text-gold'
-                  : 'border-gold/15 text-cream/50 hover:border-gold/35'
-              }`}
-            >
-              <p className="font-display text-xl tracking-wider capitalize mb-1">{opt}</p>
-              <p className="font-mono text-xs text-cream/35">
-                {opt === 'pickup' ? 'Sat & Sun · Houston, TX' : 'Local Houston only'}
-              </p>
-            </button>
-          ))}
+        <h2 className="font-display text-3xl text-gold tracking-wider mb-2">Drone Drop Address</h2>
+        <p className="font-mono text-xs text-cream/35 tracking-wider mb-6">HOUSTON AREA ONLY · ENSURE 10FT CLEAR DROP ZONE</p>
+        <div className="bg-gold/5 border border-gold/20 px-5 py-3 mb-4 flex items-center gap-3">
+          <span className="text-xl">🚁</span>
+          <p className="font-mono text-xs text-gold/70 tracking-wider">Drone delivery · Sat &amp; Sun · Delivery window confirmed after payment</p>
         </div>
-
-        {form.pickupOrDelivery === 'delivery' && (
-          <input
-            type="text"
-            placeholder="Delivery address (Houston area only)"
-            value={form.address}
-            onChange={e => setForm(f => ({ ...f, address: e.target.value }))}
-            className="w-full bg-[#0d0b09] border border-gold/15 px-4 py-3 font-body text-sm text-cream placeholder-cream/25 focus:outline-none focus:border-gold/50"
-            required
-          />
-        )}
+        <input
+          type="text"
+          placeholder="Delivery address (Houston area only)"
+          value={form.address}
+          onChange={e => setForm(f => ({ ...f, address: e.target.value }))}
+          className="w-full bg-[#0d0b09] border border-gold/15 px-4 py-3 font-body text-sm text-cream placeholder-cream/25 focus:outline-none focus:border-gold/50"
+          required
+        />
       </div>
 
       {/* Contact info */}
@@ -222,7 +202,7 @@ export default function OrderForm() {
 
       <button
         type="submit"
-        disabled={lineItems.length === 0 || !form.name || !form.phone}
+        disabled={lineItems.length === 0 || !form.name || !form.phone || !form.address}
         className="w-full bg-gold text-htx-black font-mono text-sm tracking-widest uppercase py-4 font-medium hover:bg-gold-light transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
       >
         Submit Order

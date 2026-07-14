@@ -12,7 +12,7 @@ export default function Footer() {
             <Logo size="md" />
             <p className="font-mono text-xs text-cream/40 tracking-wider mt-4 leading-relaxed">
               Torres Method. Levain Size. HTX Made.<br />
-              Houston, TX · Weekend Pickup
+              Houston, TX · Drone Delivery Only
             </p>
           </div>
 
@@ -36,8 +36,8 @@ export default function Footer() {
               <span className="text-cream/25">Details sent after order submitted</span>
             </div>
             <div className="mt-6">
-              <p className="font-mono text-xs text-gold/50 tracking-[0.2em] uppercase mb-2">Pickup</p>
-              <p className="font-mono text-xs text-cream/45">Saturday & Sunday · Houston, TX</p>
+              <p className="font-mono text-xs text-gold/50 tracking-[0.2em] uppercase mb-2">Drone Delivery</p>
+              <p className="font-mono text-xs text-cream/45">Saturday & Sunday · Houston area</p>
               <p className="font-mono text-xs text-cream/30 mt-1">Order cutoff: Thursday midnight</p>
             </div>
           </div>

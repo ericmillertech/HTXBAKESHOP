@@ -3,7 +3,7 @@ import OrderForm from '@/components/OrderForm';
 
 export const metadata: Metadata = {
   title: 'Order',
-  description: 'Order HTX Bakehouse cookies. Weekend pickup in Houston, TX. Thursday midnight cutoff. CashApp, Zelle, and Venmo accepted.',
+  description: 'Order HTX Bakehouse cookies. Drone delivery in Houston, TX. Thursday midnight cutoff. CashApp, Zelle, and Venmo accepted.',
 };
 
 export default function OrderPage() {
@@ -17,7 +17,7 @@ export default function OrderPage() {
             LET&apos;S GO
           </h1>
           <p className="font-body text-cream/45 text-lg max-w-2xl leading-relaxed">
-            Weekend pickup. Houston only. Order by Thursday midnight — no exceptions.
+            Drone delivery only. Houston area. Order by Thursday midnight — no exceptions.
             Payment via CashApp, Zelle, or Venmo after confirmation.
           </p>
         </div>
@@ -28,7 +28,7 @@ export default function OrderPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-wrap gap-8 font-mono text-xs text-cream/50 tracking-wider">
             <span>
-              <span className="text-gold">Pickup:</span> Saturday &amp; Sunday
+              <span className="text-gold">Delivery:</span> Drone · Sat &amp; Sun
             </span>
             <span className="text-gold/20 hidden sm:inline">|</span>
             <span>
@@ -40,7 +40,7 @@ export default function OrderPage() {
             </span>
             <span className="text-gold/20 hidden sm:inline">|</span>
             <span>
-              <span className="text-gold">Min:</span> 1 cookie
+              <span className="text-gold">Zone:</span> Houston area only
             </span>
           </div>
         </div>
@@ -65,12 +65,12 @@ export default function OrderPage() {
                 a: "After you submit your order, we'll confirm it via text or email and send payment instructions. You pay via CashApp, Zelle, or Venmo — payment locks in your order.",
               },
               {
-                q: 'Where do I pick up?',
-                a: "Pickup location is shared after your order is confirmed and paid. We're in Houston, TX. We do not ship — these are baked fresh and meant to be eaten the same day.",
+                q: 'How does drone delivery work?',
+                a: "After your order is confirmed and paid, we schedule your drone drop for Saturday or Sunday. You'll receive a delivery window and a live tracking link. Make sure the drop zone at your address is clear — the drone needs a 10ft open area.",
               },
               {
                 q: 'Can I order same day?',
-                a: "No. Every cookie rests for 72 hours before it's baked. Thursday midnight is the hard cutoff for weekend pickup. No exceptions — not for any order size.",
+                a: "No. Every cookie rests for 72 hours before it's baked. Thursday midnight is the hard cutoff for weekend drone delivery. No exceptions — not for any order size.",
               },
               {
                 q: 'What if I have an allergy?',

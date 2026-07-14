@@ -198,7 +198,7 @@ export default function HomePage() {
       <section className="py-20 bg-htx-black border-t border-gold/15 text-center">
         <div className="max-w-xl mx-auto px-6">
           <h2 className="font-display text-6xl text-gold tracking-wider mb-4">READY?</h2>
-          <p className="font-body text-cream/45 mb-10">Weekend pickup. Houston only. Thursday midnight cutoff.</p>
+          <p className="font-body text-cream/45 mb-10">Drone delivery only. Houston area. Thursday midnight cutoff.</p>
           <Link href="/order" className="inline-flex items-center bg-gold text-htx-black font-mono text-sm tracking-widest uppercase px-10 py-4 font-medium hover:bg-gold-light transition-colors animate-pulse-glow">
             Order Now
           </Link>

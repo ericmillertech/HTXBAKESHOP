@@ -17,7 +17,7 @@ const values = [
 const family = [
   { role: 'Head Baker', who: 'Dad', what: 'Recipe development, quality control, kitchen operations. Every batch starts and ends with him.' },
   { role: 'Brand & Operations', who: 'Daughter', what: 'Brand identity, social media, packaging, customer orders. The voice of HTX Bakehouse.' },
-  { role: 'Production & Delivery', who: 'Son', what: 'Delivery, production support, content. When he wants in — he\'s all the way in.' },
+  { role: 'Drone Ops & Production', who: 'Son', what: 'Drone delivery, production support, content. When he wants in — he\'s all the way in.' },
 ];
 
 export default function AboutPage() {
